@@ -1,0 +1,34 @@
+package assignment;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class As5 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		ChromeDriver driver = new ChromeDriver();
+
+		driver.get("https://www.facebook.com/signup");
+
+		driver.findElement(By.name("firstname")).sendKeys("abc");
+
+		driver.findElement(By.name("lastname")).sendKeys("xyz");
+
+		driver.findElement(By.name("reg_email__")).sendKeys("9562324546");
+
+		driver.findElement(By.name("reg_passwd__")).sendKeys("pqr@1236");
+
+		driver.findElement(By.name("birthday_year")).sendKeys("2000");
+
+		driver.findElement(By.xpath("(//input[@name='sex'])[2]")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.cssSelector("[type='submit']")).click();
+
+
+	}
+
+}
+
